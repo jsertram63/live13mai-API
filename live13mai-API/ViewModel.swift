@@ -13,6 +13,8 @@ class ViewModel : ObservableObject {
     
     @Published var todos : [Todo] = []
     
+    
+    
     func fetch() {
         guard let url = URL(string:"https://jsonplaceholder.typicode.com/todos") else {
             return
@@ -33,12 +35,8 @@ class ViewModel : ObservableObject {
             catch {
                 
             }
-        
         }
         task.resume()
-      
-        
-        
     }
     
 }

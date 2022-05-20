@@ -10,7 +10,6 @@ import SwiftUI
 
 struct URLImage: View {
     let urlString:String
-    
     @State var data:Data?
     var body: some View {
         if let data = data, let uiimage = UIImage(data: data){
@@ -30,7 +29,6 @@ struct URLImage: View {
                }
         }
     }
-    
     private func fetchData(){
         guard let url = URL(string: urlString) else {
             return
@@ -40,7 +38,6 @@ struct URLImage: View {
         }
         task.resume()
     }
-    
 }
 
 struct PhotoContentView: View {

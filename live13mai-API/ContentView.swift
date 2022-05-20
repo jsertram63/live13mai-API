@@ -14,9 +14,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-    
     @StateObject var viewModel = ViewModel()
-    
     var body: some View {
         NavigationView {
             List {
@@ -28,7 +26,6 @@ struct ContentView: View {
                     }
                     .padding()
                 }
-                
             }
         }
         .navigationTitle("API")
@@ -37,6 +34,7 @@ struct ContentView: View {
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
